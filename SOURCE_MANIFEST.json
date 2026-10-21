@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "upstream_repository": "https://github.com/MiSTer-devel/PSX_MiSTer",
+  "upstream_commit": "cd17b5a0ad261005c321d9d5ba41b8dbe313a7d3",
+  "export_description": "Clean source snapshot, without private Git history. Completed Dual hardware inputs retained; matched Single wrapper included unqualified.",
+  "release_reference": {
+    "variant": "PSX_HQ2X_DualSDRAM",
+    "rbf_sha256": "384046b41006c595c6cd9d24873dc3c30080f7cf2a14d2d96506c393b5f5fc3c",
+    "rbf_bytes": 4467892,
+    "build_date_define": "261021",
+    "hardware_project_files_verified": 143,
+    "generated_build_id_v_included": true
+  },
+  "excluded_from_upstream": [
+    "historical releases",
+    "automatic publication workflows",
+    "unused legacy simulation projects",
+    "unused upstream blank memory-card binary template"
+  ],
+  "manifest_excludes": [
+    "SOURCE_MANIFEST.json itself",
+    "releases/ (release assets have separate checksums)",
+    ".git/"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 394,
+      "sha256": "0740e26854eb4302c590331b87d2d6fa06936ddae086bdaa1fa914fab58a73ee"
+    },
+    {
+      "path": "build_id.v",
+      "bytes": 27,
+      "sha256": "d106096e0424768a7424eb2335f8f9626f2e432965c7f2d2cd68b0f3fd1c709b"
+    },
+    {
+      "path": "clean.bat",
+      "bytes": 708,
+      "sha256": "e12b66c8340c1fe99d7ffeb76d0aa839d4e18d9031425fedef3e7bb682258aa3"
+    },
+    {
+      "path": "COPYING",
+      "bytes": 18431,
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b"
+    },
+    {
+      "path": "docs/BUILD.md",
+      "bytes": 5452,
+      "sha256": "b5135a5239fdec18c94d066d7e14ba383b1e6acfd1457c5f708031e7e14b11a8"
+    },
+    {
+      "path": "files.qip",
+      "bytes": 498,
+      "sha256": "f38141d4b9735412737f051a101b29d92e6880c1e64cf8dea5259bb7436b5bed"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 18431,
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b"
+    },
+    {
+      "path": "PSX.qpf",
+      "bytes": 52,
+      "sha256": "13645d0db8631bf4799aa6edc779583d5cc408b774a4ad6e3b87c69d54ca6525"
+    },
+    {
+      "path": "PSX.qsf",
+      "bytes": 3749,
+      "sha256": "e2a57e111c527cc3f5f78aeab100cf463bbafe0e77fe2214ed526841a91a4730"
+    },
+    {
+      "path": "PSX.sdc",
+      "bytes": 2000,
+      "sha256": "ee521fb98b12cd7b31d6ea6ae0ec33a4a45c74da34d20345241efd11819f2384"
+    },
+    {
+      "path": "PSX.srf",
+      "bytes": 5088,
+      "sha256": "8a62627ea4b775c7422b3cf475774e5e963967d438420cf5266022ff543e3ab8"
+    },
+    {
+      "path": "PSX.sv",
+      "bytes": 59372,
+      "sha256": "8cfc8a8ed7ace2e8a7348ad1c46f35fc9266fbd97ed14afc81d7a9f818e89d97"
+    },
+    {
+      "path": "PSX_DualSDRAM.qpf",
+      "bytes": 62,
+      "sha256": "3a52c68d23300f9670c3fdd6dcfd6a1abb4f17d3847a568f39082902d331c887"
+    },
+    {
+      "path": "PSX_DualSDRAM.qsf",
+      "bytes": 3757,
+      "sha256": "331fb07185acbe6d8d7643ab78ca2368e0ca4f8d981587298d088a9ef44dbcd3"
+    },
+    {
+      "path": "PSX_DualSDRAM.srf",
+      "bytes": 5088,
+      "sha256": "8a62627ea4b775c7422b3cf475774e5e963967d438420cf5266022ff543e3ab8"
+    },
+    {
+      "path": "PSX_HQ2X.qpf",
+      "bytes": 55,
+      "sha256": "caec0c7202920574c47176b020f661bcd7fc72ad6f02f0cb2eb81b56ed0953d6"
+    },
+    {
+      "path": "PSX_HQ2X.qsf",
+      "bytes": 705,
+      "sha256": "73c223eb934e35cfb37ab3c973337055d07b6a6b114e9522c6659ea4aeab29ed"
+    },
+    {
+      "path": "PSX_HQ2X_DualSDRAM.qpf",
+      "bytes": 65,
+      "sha256": "5ff0fa42a0581ff6b0351228793893dc17894d21e07807509f7ebedfa40506fb"
+    },
+    {
+      "path": "PSX_HQ2X_DualSDRAM.qsf",
+      "bytes": 955,
+      "sha256": "e4f39cb3a2d0933b3223ad104cc2718034c86e10502e06fc0aa71d97d7559959"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4913,
+      "sha256": "4cc6af5704d775451e86056c738845ba6ddc2fc01a1478974cc300ceb17b3ea8"
+    },
+    {
+      "path": "rtl/cd_top.vhd",
+      "bytes": 170242,
+      "sha256": "7e0bdae928c6de0c66d6e297a4b1bd44548c1862e0bbf0e939900accc73ece62"
+    },
+    {
+      "path": "rtl/cd_xa.vhd",
+      "bytes": 23623,
+      "sha256": "272465c56bd42da445415b93982d81322fc118c3ff894529ced7201af1a8bd49"
+    },
+    {
+      "path": "rtl/cd_xa_zigzag.vhd",
+      "bytes": 2729,
+      "sha256": "934f187f2a578d51df1dc3a1650f3a7a046f7a8c7193bf147309b72329ec1a9a"
+    },
+    {
+      "path": "rtl/cheats.vhd",
+      "bytes": 10596,
+      "sha256": "9c6f52fa05bed58de5e8d159347657b7d5457321f6273dff8e0e622a222aa6d0"
+    },
+    {
+      "path": "rtl/cpu.vhd",
+      "bytes": 128554,
+      "sha256": "175de7b197cb235b04018d4600643f5f9bb1f5fc1a617176dc389c50c8bd0173"
+    },
+    {
+      "path": "rtl/datacache.vhd",
+      "bytes": 5934,
+      "sha256": "b7c6b980b111bcc64bb40d3d8fa981c95879f5f0fe91328b764901b35e9bab16"
+    },
+    {
+      "path": "rtl/ddram.sv",
+      "bytes": 6713,
+      "sha256": "b437a020dd5d730a735b961f8e0265f47ef7ecb576a2dbf48545890b7b17c24e"
+    },
+    {
+      "path": "rtl/divider.vhd",
+      "bytes": 4979,
+      "sha256": "e215d564f48d98e7cde2c94ac5a13ad60f172f3cfe1231bced750a5888fc4079"
+    },
+    {
+      "path": "rtl/dma.vhd",
+      "bytes": 47169,
+      "sha256": "123e6beb841a586d7f8b9eebbaec5ee988f7af326dfee5ecc4afef093e11bf9c"
+    },
+    {
+      "path": "rtl/dpram.vhd",
+      "bytes": 5930,
+      "sha256": "eb78e48be0ae3094d8144e2ec5b6d19a605d5beb6c66e2e7a44890ac1d3d7baf"
+    },
+    {
+      "path": "rtl/exp2.vhd",
+      "bytes": 3359,
+      "sha256": "6682363490d9dcf6d529f8e7b53587ff9f182a3ff4058bc8aa429996491c3ce7"
+    },
+    {
+      "path": "rtl/export.vhd",
+      "bytes": 10301,
+      "sha256": "a8c762aec26b7d2694ca4b0970ba260846dc907a1a28d34c47735ecf700678fc"
+    },
+    {
+      "path": "rtl/gpu.vhd",
+      "bytes": 97252,
+      "sha256": "3ab3451d077e3ffdb956c885a6724bbdbc65d694bfa0fde292c29c3981950397"
+    },
+    {
+      "path": "rtl/gpu_cpu2vram.vhd",
+      "bytes": 5712,
+      "sha256": "fcd346f17ebd07aaeea0dc8d66934af67637026ae511d5ad068951dd1ccbbb01"
+    },
+    {
+      "path": "rtl/gpu_crosshair.vhd",
+      "bytes": 2664,
+      "sha256": "64aa129398bdc7ebffd64c367f3930ba2d143f718edb6121a70ce60869d62ff7"
+    },
+    {
+      "path": "rtl/gpu_dither.vhd",
+      "bytes": 4709,
+      "sha256": "4f88bc4a23ebec4d1574b2feb4485a8e2d2a6ad699a992cc9648e0ee628260d7"
+    },
+    {
+      "path": "rtl/gpu_fillVram.vhd",
+      "bytes": 5804,
+      "sha256": "048fd7023b05326b052f797750da1b197d69bbc7e1e95f21616043ac0180cf1f"
+    },
+    {
+      "path": "rtl/gpu_line.vhd",
+      "bytes": 25805,
+      "sha256": "886ee499d318120c8c4520b2f3258c4ef84601c530743dfceb6706286bbea032"
+    },
+    {
+      "path": "rtl/gpu_overlay.vhd",
+      "bytes": 14924,
+      "sha256": "4931b934fc5272e422fe96d940e522c977b1896568db5c74fd5250daa81df9dc"
+    },
+    {
+      "path": "rtl/gpu_pixelpipeline.vhd",
+      "bytes": 48663,
+      "sha256": "030869525bf18963e1e6934aa80bf2ec0a79d442e4e1044c113044c8ab191539"
+    },
+    {
+      "path": "rtl/gpu_poly.vhd",
+      "bytes": 55781,
+      "sha256": "62476a8fbe596861291ec74d50ac75b2186856e4eabcde44a60cabd3aa0102bc"
+    },
+    {
+      "path": "rtl/gpu_rect.vhd",
+      "bytes": 17063,
+      "sha256": "9f95c29934efd45508e1b1115aae45e9e83d537eb3d5e0f6905e78a3c5cf15d3"
+    },
+    {
+      "path": "rtl/gpu_videoout.vhd",
+      "bytes": 24286,
+      "sha256": "6cf0ee7fbb5baccaaef6c3cc8c0d116c98a179b8d4cd7450b209f3694699e235"
+    },
+    {
+      "path": "rtl/gpu_videoout_async.vhd",
+      "bytes": 42440,
+      "sha256": "b6e0ee137a491b4d53922dd21ec0e53011adc967b05a10057d9ff6b306862f84"
+    },
+    {
+      "path": "rtl/gpu_videoout_sync.vhd",
+      "bytes": 20410,
+      "sha256": "ad5634dae7f4d42d5c1a8a027449947883deab5f8dacdccf4d3450757e2459b2"
+    },
+    {
+      "path": "rtl/gpu_vram2cpu.vhd",
+      "bytes": 10653,
+      "sha256": "02404a355377d332479f2a736aa28236a119243bf850f968d483933c931f9d52"
+    },
+    {
+      "path": "rtl/gpu_vram2vram.vhd",
+      "bytes": 9054,
+      "sha256": "90f0540bb82c2ab0335f96e26a48b63e7596bede9f95ecb402313286c4a15888"
+    },
+    {
+      "path": "rtl/gte.vhd",
+      "bytes": 151115,
+      "sha256": "3712da2e6c96103cbcdf199eca095429b4c0176c0133d8e6c574e2277ec034be"
+    },
+    {
+      "path": "rtl/gte_mac0.vhd",
+      "bytes": 3292,
+      "sha256": "6ef21adb401cc67738d20a9a7430e9d3f009c9aabd09ed29737efc82a7c9c20a"
+    },
+    {
+      "path": "rtl/gte_mac123.vhd",
+      "bytes": 4379,
+      "sha256": "a4207ca8e11eb875333dde610eaa71ca1a1ba97f7c351daa8b6f1f54f3bde95d"
+    },
+    {
+      "path": "rtl/gte_UNRDivide.vhd",
+      "bytes": 7661,
+      "sha256": "4641bf473761690643b5ae5462f18bbc4c36473bfb613041d57003a6727da360"
+    },
+    {
+      "path": "rtl/hps_ext.v",
+      "bytes": 1775,
+      "sha256": "4b25414846114760b339c3ab692d0cea1ccfa394e86fe55c5032dc9e00a6e2b8"
+    },
+    {
+      "path": "rtl/irq.vhd",
+      "bytes": 5260,
+      "sha256": "ff85113d98cc85af95968af9cb1d8356219913cf53e02f5425d477fccc2afc21"
+    },
+    {
+      "path": "rtl/joypad.vhd",
+      "bytes": 33258,
+      "sha256": "6c6e4bc31b6ccecf7d291251766895982acad6b9f95c8c2c989d1a9c37d6b91c"
+    },
+    {
+      "path": "rtl/joypad_mem.vhd",
+      "bytes": 14933,
+      "sha256": "2c30510b643666c99f040537ad091a4cf65f683b324dcd3c9797fad161ca4c31"
+    },
+    {
+      "path": "rtl/joypad_pad.vhd",
+      "bytes": 70173,
+      "sha256": "f0f9443d95ea181f8589e49fec5a884e6ce38d789c42489dc97ed4ad4c50adff"
+    },
+    {
+      "path": "rtl/justifier_sensor.vhd",
+      "bytes": 2901,
+      "sha256": "feced5500c18d620300e6137c59352747ea980d4e6d47b4cfbb0efa367ec93ae"
+    },
+    {
+      "path": "rtl/mdec.vhd",
+      "bytes": 63797,
+      "sha256": "bc7d4db6a0dedb2706836bb1fe4a591919549c198427e4bf07d204aef3bc564a"
+    },
+    {
+      "path": "rtl/mem.qip",
+      "bytes": 653,
+      "sha256": "8eb2f637866c57ed6a026b7cd5bcd8cf49847f36a0d0ae82439980ab00f543ac"
+    },
+    {
+      "path": "rtl/memcard.vhd",
+      "bytes": 9603,
+      "sha256": "9094b4de6da1258cb8d13e982b076cf9166931f22bb8582c00fb18dc4572a267"
+    },
+    {
+      "path": "rtl/memctrl.vhd",
+      "bytes": 9541,
+      "sha256": "b5b0a63673866c18eaa0128fc7f85190d1f533f0276826166d2d486a34bed5f3"
+    },
+    {
+      "path": "rtl/memorymux.vhd",
+      "bytes": 61285,
+      "sha256": "0b76931cedf8ae831a2e26c7259019a82d8decd23f4760a9ecb68b4439b54098"
+    },
+    {
+      "path": "rtl/mul32u.vhd",
+      "bytes": 386,
+      "sha256": "844818d3ffd163622e30b063c1c7c92c371786e2485194f4ac02cdde5a16e158"
+    },
+    {
+      "path": "rtl/mul9s.vhd",
+      "bytes": 365,
+      "sha256": "b452fdd6815cc952466bad27afbc0f49b7f41b12d88f7a268b4d8eb0eb9c62d8"
+    },
+    {
+      "path": "rtl/pGPU.vhd",
+      "bytes": 3402,
+      "sha256": "c4d37097be58def1d7fa17f924188ca4b03de90cf478b538d34c861dd097631c"
+    },
+    {
+      "path": "rtl/pGTE.vhd",
+      "bytes": 1011,
+      "sha256": "8511ab1ffe1e14cc9e58811003cbde9298b6b2988e5212b6aa2bcca90062232c"
+    },
+    {
+      "path": "rtl/pJoypad.vhd",
+      "bytes": 1155,
+      "sha256": "6cc04a1e25344f2def1b28ced734160984b50426848037d9a0bbaf0482f44440"
+    },
+    {
+      "path": "rtl/pll/pll_0002.qip",
+      "bytes": 403,
+      "sha256": "a88dcf61d2463ac673fc7a36f7d41160b4db1137d4f5678e78646b65ebee9305"
+    },
+    {
+      "path": "rtl/pll/pll_0002.v",
+      "bytes": 2294,
+      "sha256": "feeab811afc54538f4f875e6c5c624eff7aa4674d25403638e34d310d8fda44b"
+    },
+    {
+      "path": "rtl/pll.qip",
+      "bytes": 51983,
+      "sha256": "3bc60ef64ec363ec13d42805ebd71e6dd7ddbb111ff600416cc020704f92b55c"
+    },
+    {
+      "path": "rtl/pll.v",
+      "bytes": 17489,
+      "sha256": "4fa5223401dc1b1f9b3b709e7b946e8c70d4d5deb8fc48948b9e3734f936ed2b"
+    },
+    {
+      "path": "rtl/pll2/pll2_0002.qip",
+      "bytes": 217,
+      "sha256": "e618d4053c1913f52173e7c100389bca32495b5677f89ad85e11c4c1e5f0bf2e"
+    },
+    {
+      "path": "rtl/pll2/pll2_0002.v",
+      "bytes": 6477,
+      "sha256": "a5746df1ef450469eabbdecf59f7c373ea3ce6c340e28dcd1e99dbcefd3b3d25"
+    },
+    {
+      "path": "rtl/pll2.qip",
+      "bytes": 73471,
+      "sha256": "713ad81a9424e85c9dc84750c651246cf94f50d8d4118a115d645725ab62e427"
+    },
+    {
+      "path": "rtl/pll2.v",
+      "bytes": 17794,
+      "sha256": "51fd846807a7ad76789f7ceb783da7b5e77ba3a39bb3544ba4164f9e9467cf9c"
+    },
+    {
+      "path": "rtl/psx.qip",
+      "bytes": 4659,
+      "sha256": "6ed9d9c75db538b2dcc58abbdbc32946d6e59c8c754019f6fc34029711c1a232"
+    },
+    {
+      "path": "rtl/psx_mister.vhd",
+      "bytes": 30538,
+      "sha256": "37ae43a5229043ae86b63285a205bc8026f2ac03a5d95542a23409286bb8ab1d"
+    },
+    {
+      "path": "rtl/psx_top.vhd",
+      "bytes": 93883,
+      "sha256": "a523811f624a1dad4ffc55ec8e856a47adfa556b53592b72e8e297c253a54861"
+    },
+    {
+      "path": "rtl/RamMLAB.vhd",
+      "bytes": 2132,
+      "sha256": "5ffbb7119a27762d430fdfc1803eb4d3a716bb3495f095e33ec049713340136b"
+    },
+    {
+      "path": "rtl/savestate_ui.sv",
+      "bytes": 3895,
+      "sha256": "e4e056cd86d67d4556f84634d5887af87a8e56e90c129c2a0490de69f9ddc6c2"
+    },
+    {
+      "path": "rtl/savestates.vhd",
+      "bytes": 30864,
+      "sha256": "2ec1eebf32a7d06f8bbc6875905dd2891c9ec5a3f5ea880398a55fda6d8951ff"
+    },
+    {
+      "path": "rtl/sdram.sv",
+      "bytes": 21306,
+      "sha256": "cdd5643038f07d88c0e80e3973de2107b98e36286def547b0403f41a99cfacc8"
+    },
+    {
+      "path": "rtl/sio.vhd",
+      "bytes": 4539,
+      "sha256": "b8b5a3da1a27896fdcf4da82fbb729ceda0e8f9e2b7d17428c559f20ec314b60"
+    },
+    {
+      "path": "rtl/spu.vhd",
+      "bytes": 147023,
+      "sha256": "9d987e2d8c477049095d32e76ad0dcf5321aaa3372d5aef5cd598d0d9bc6990d"
+    },
+    {
+      "path": "rtl/spu_gauss.vhd",
+      "bytes": 6371,
+      "sha256": "0d69dd5e916e8c4de051d9ab661695899ecd4fef32149239abe200ab0bf5ff57"
+    },
+    {
+      "path": "rtl/spu_ram.vhd",
+      "bytes": 21916,
+      "sha256": "e28e419ccb89bb2ba558a2ea8c244dd294c78c93e4759b210343ce457f2ce06e"
+    },
+    {
+      "path": "rtl/statemanager.vhd",
+      "bytes": 5767,
+      "sha256": "3d0aa68ede6a3691e70fefd6a9aaf2c3f89b12d52933635ca9955855db6c590b"
+    },
+    {
+      "path": "rtl/SyncFifo.vhd",
+      "bytes": 2526,
+      "sha256": "70ff739029cee54f3b7d1efff86d24ebe0f4a2a5e56da67a129077d052b94350"
+    },
+    {
+      "path": "rtl/SyncFifoFallThrough.vhd",
+      "bytes": 3564,
+      "sha256": "12560fe786492108c1aa65f215d0b5a6686758b6b7dacf8070023a7108d8e226"
+    },
+    {
+      "path": "rtl/SyncFifoFallThroughMLAB.vhd",
+      "bytes": 4407,
+      "sha256": "6206ea700e43dcea1db0c9ab092efa54e220ecd6c20bc0c955eba9435d1e607d"
+    },
+    {
+      "path": "rtl/SyncRam.vhd",
+      "bytes": 950,
+      "sha256": "2f9df5dda887e80ea3aac8bdb45313a84b1a2500bc445849fc210fea87b0da2d"
+    },
+    {
+      "path": "rtl/SyncRamDual.vhd",
+      "bytes": 1596,
+      "sha256": "3406de481194f8c3df784bfb62502048323d0124a3af8f7fcfde0a31f2935538"
+    },
+    {
+      "path": "rtl/SyncRamDualByteEnable.vhd",
+      "bytes": 7690,
+      "sha256": "90295d470b37f8bbc7d2faa6e11b39203ca896c18d6faf09ff7c2625e75cab02"
+    },
+    {
+      "path": "rtl/SyncRamDualNotPow2.vhd",
+      "bytes": 1591,
+      "sha256": "926acd1a475695a5f7e3fe4758ee7c42f10793e1c5257b61fa1cd992d074b2a8"
+    },
+    {
+      "path": "rtl/timer.vhd",
+      "bytes": 14842,
+      "sha256": "cc75ab7742c019330f81c9d332cd26217c6fa68c4fa3631318e073570df8adad"
+    },
+    {
+      "path": "sim/hq2x/prepare.mjs",
+      "bytes": 6593,
+      "sha256": "0376e6d52cfc711b2b33ee2f4c27d76c05b4cabbe842aeaae904ab61b1c675df"
+    },
+    {
+      "path": "sim/hq2x/README.md",
+      "bytes": 962,
+      "sha256": "748101d1a08f2910f7e772f99041aa4175baae85960e1e2a1cf78b820d84dd48"
+    },
+    {
+      "path": "sim/hq2x/run-native.py",
+      "bytes": 1547,
+      "sha256": "b5a3e126b73258e5eeea6339554953196e1eca7a9d8a931e93133e6cd049c7c7"
+    },
+    {
+      "path": "sim/hq2x/tb_hq2x.sv",
+      "bytes": 5965,
+      "sha256": "9dde64aab53a6974589ff609fea42fa68753555282e14a500252a7bc77f304ba"
+    },
+    {
+      "path": "sim/hq2x/tb_hq2x_control.sv",
+      "bytes": 3721,
+      "sha256": "2c5f59ee79062d2fc2347a2f3456cd2214f5efa67e85da08bb58c49459f48ae8"
+    },
+    {
+      "path": "sim/hq2x/tb_hq2x_differential.sv",
+      "bytes": 5815,
+      "sha256": "d9d3894129c5b22a4abad95338bb148954cfddf3467811761fdeee8422b42fdd"
+    },
+    {
+      "path": "sim/hq2x/tb_hq2x_reset.sv",
+      "bytes": 3592,
+      "sha256": "f6c13b04cf7777097258c72a8274feb7a6e9f9b1bc1255d76b93a8e08be6ea0f"
+    },
+    {
+      "path": "sim/hq2x/tb_hq2x_spatial.sv",
+      "bytes": 5403,
+      "sha256": "eb03686f69a509e1ad5ff59a469b157066317bd28397556da5557c7e1106aa42"
+    },
+    {
+      "path": "sim/hq2x/tb_hq2x_sync_observer.sv",
+      "bytes": 901,
+      "sha256": "2477f9517cafd475cad49162dc448c1694aa9c4d1551bf9b6dcd0bc57e1750b5"
+    },
+    {
+      "path": "sys/alsa.sv",
+      "bytes": 3955,
+      "sha256": "a286b786b13353a4e5ac729440e96381896600051cd39526ca354b8e662608b1"
+    },
+    {
+      "path": "sys/arcade_video.v",
+      "bytes": 8597,
+      "sha256": "ce64cdd7f900ded7b9cd9aa728dab7383b7561cdc75dfe82ab23fe27a3d217d3"
+    },
+    {
+      "path": "sys/ascal.vhd",
+      "bytes": 98563,
+      "sha256": "c53231d8d48c0f890326a782dfe3feb8d486cfdddba5de224c05a7bc6b841cf1"
+    },
+    {
+      "path": "sys/audio_out.sv",
+      "bytes": 6826,
+      "sha256": "429407debad8260a8e9ff166b69c6f3f0373bdeb4b7eb2dce1fc8af1fb4f6541"
+    },
+    {
+      "path": "sys/build_id.tcl",
+      "bytes": 2202,
+      "sha256": "148dc6a8124d36ac2898a45d085960cc05178a76d7297fde8877925fc0a74e88"
+    },
+    {
+      "path": "sys/ddr_svc.sv",
+      "bytes": 2662,
+      "sha256": "8dfa874b9a93b4dbbe3b2fcf4f9035a895262cc090d398f4099941a626f41c08"
+    },
+    {
+      "path": "sys/emu_ports.vh",
+      "bytes": 4025,
+      "sha256": "0b8f96815236ea4fcfec6fa3592b58f4c53f12094f31a26fd509709b503225e0"
+    },
+    {
+      "path": "sys/f2sdram_safe_terminator.sv",
+      "bytes": 8185,
+      "sha256": "400bcbcfc0b4aae324fe813866a5443d577bf4de9b4ab1454cb068733d170261"
+    },
+    {
+      "path": "sys/gamma_corr.sv",
+      "bytes": 3310,
+      "sha256": "bf5a10783c8e5846f2124e67c555d23bd900ac5d05f611aecad23b8a4c4db10d"
+    },
+    {
+      "path": "sys/hps_io.sv",
+      "bytes": 28059,
+      "sha256": "11f2548683f8592458afef8d4824e29b49bee7aaca601812815e69863a481cc3"
+    },
+    {
+      "path": "sys/hq2x.sv",
+      "bytes": 10908,
+      "sha256": "add2820efe5574abae4cd8a2bdb22d468daedfb2af7b58f9c6585e7915f8ebed"
+    },
+    {
+      "path": "sys/i2c.v",
+      "bytes": 2269,
+      "sha256": "09bd7ebd5d84fb57f6a9d569e5214f3154c49e55826c15bd78884f3c781fec5b"
+    },
+    {
+      "path": "sys/i2s.v",
+      "bytes": 893,
+      "sha256": "650c796742f69b2dd152c6871064c31be1e33a8aca046668b01a7a79712d689f"
+    },
+    {
+      "path": "sys/iir_filter.v",
+      "bytes": 5659,
+      "sha256": "570a8095c15af84a60015b5eab105cee6e2d7edde77e20f0ce40c075ab2db8b7"
+    },
+    {
+      "path": "sys/ltc2308.sv",
+      "bytes": 3730,
+      "sha256": "217eedccf331050adbcfaed17dac6e8f0016a5140eebd9488556c889c5698133"
+    },
+    {
+      "path": "sys/math.sv",
+      "bytes": 2065,
+      "sha256": "d384fa9fcf73100cb28a2affc5db1e4aacc87620287971c3882507fc3af056cc"
+    },
+    {
+      "path": "sys/mcp23009.sv",
+      "bytes": 1945,
+      "sha256": "7f02c3d12c7dd9dac6ff3ebc14e1741c6e5d0685f05b8ab928399fee63d09dd2"
+    },
+    {
+      "path": "sys/mt32pi.sv",
+      "bytes": 6243,
+      "sha256": "4ad39571d16a4b25347030d75ffdf601803ddec71e2e3fcabe962103cc45a1a2"
+    },
+    {
+      "path": "sys/osd.v",
+      "bytes": 7930,
+      "sha256": "e4f29b0c6b600b468fecf1634708b25b977cf2c7ba8fc20e0fc8e759c97722bf"
+    },
+    {
+      "path": "sys/pll.13.qip",
+      "bytes": 1202,
+      "sha256": "f97928526dd6865d25dbb2e10cabfc679d6777be07a0589e06caac7916715a37"
+    },
+    {
+      "path": "sys/pll_audio/pll_audio_0002.qip",
+      "bytes": 427,
+      "sha256": "afc57d46dfcc6faf7136ad4875a79f7770ec8e2fad9849c070f4f076c51ebb2a"
+    },
+    {
+      "path": "sys/pll_audio/pll_audio_0002.v",
+      "bytes": 2161,
+      "sha256": "2b24d2a561d81cc8b20f725884ee9c243e619058e42ebcdcf6f491d33008696c"
+    },
+    {
+      "path": "sys/pll_audio.13.qip",
+      "bytes": 1401,
+      "sha256": "5373220c49eca185cde0624634f986483a28037d9607edcf1fae5408461ac46b"
+    },
+    {
+      "path": "sys/pll_audio.qip",
+      "bytes": 55375,
+      "sha256": "000251bec942ef6af09cac43c9c9a3fcb6c5bfa15b965c601c4a2a2f0827612c"
+    },
+    {
+      "path": "sys/pll_audio.v",
+      "bytes": 17313,
+      "sha256": "1662fff7650cd443db81db7f0707f5583d223372b3e3c41af2d41ea4f3ac38f3"
+    },
+    {
+      "path": "sys/pll_cfg/altera_pll_reconfig_core.v",
+      "bytes": 85094,
+      "sha256": "9058d2c68e9cb0b1b6b3ab5487daad8aeaf04461e162aba317857dd133329189"
+    },
+    {
+      "path": "sys/pll_cfg/altera_pll_reconfig_top.v",
+      "bytes": 14825,
+      "sha256": "34c11c19e6bf3797d2db2e41314ce802f5a01041265ce943b54e7f20eb2027c9"
+    },
+    {
+      "path": "sys/pll_cfg/pll_cfg.v",
+      "bytes": 4627,
+      "sha256": "e07ae93193537830b3bc9029465e763a6bfe354c25b7e7747eeeb4094b08ad10"
+    },
+    {
+      "path": "sys/pll_cfg/pll_cfg_hdmi.v",
+      "bytes": 52773,
+      "sha256": "f42a49ea9fd36174243c6ad8e8589eaa25e3fde1e080d8630530671834293f43"
+    },
+    {
+      "path": "sys/pll_cfg.qip",
+      "bytes": 545,
+      "sha256": "21faf3d9666d91905bfdb0ebb8d308109509afaeeee0fae75774c587e1b04a40"
+    },
+    {
+      "path": "sys/pll_hdmi/pll_hdmi_0002.qip",
+      "bytes": 225,
+      "sha256": "037bd53b941a9dba72d4d9f7f716890e05ddd54de3cd6c1eea22b4451ddce848"
+    },
+    {
+      "path": "sys/pll_hdmi/pll_hdmi_0002.v",
+      "bytes": 6483,
+      "sha256": "27c77f35c89e97994477801f83edf3c7e9c5b9e57df49864434d300c40e9f1f7"
+    },
+    {
+      "path": "sys/pll_hdmi.13.qip",
+      "bytes": 1378,
+      "sha256": "a0d6ccbc83d64f1814ac50824cfd77b056ee30bf10aa25af022ea7cfc5f89d45"
+    },
+    {
+      "path": "sys/pll_hdmi.qip",
+      "bytes": 77315,
+      "sha256": "0ede985aa43e5d3c363c9ddcc6f736f0c2acb5590d888daa8933a104ef8c8198"
+    },
+    {
+      "path": "sys/pll_hdmi.v",
+      "bytes": 17805,
+      "sha256": "499561547c1045a46f1137558e2bab83d8e026e5d32669b5c5779a264b7ed676"
+    },
+    {
+      "path": "sys/pll_hdmi_adj.vhd",
+      "bytes": 12421,
+      "sha256": "78135450032b27888b625db9ca57d88b5ebe444dc69498a3b82363020b08e36d"
+    },
+    {
+      "path": "sys/pll_q13.qip",
+      "bytes": 384,
+      "sha256": "727fe7d24c8582a5ec7923c741b04288cce354220f58ead5f7bd355ad62409a7"
+    },
+    {
+      "path": "sys/pll_q17.qip",
+      "bytes": 345,
+      "sha256": "9d662ba114d5c02e82c0f500e7e9600e02962549c74a84fd5bf2ce34abb69a76"
+    },
+    {
+      "path": "sys/scandoubler.v",
+      "bytes": 4908,
+      "sha256": "e165eed142dbe525872038d7fe7fa4c6a50581473189cd4ee5d5d1cdbf5497c2"
+    },
+    {
+      "path": "sys/scanlines.v",
+      "bytes": 1509,
+      "sha256": "948db6e6d67900b52c3b45671a112ea0ddc0ddecaf4f4192788657f79aa30ad6"
+    },
+    {
+      "path": "sys/sd_card.sv",
+      "bytes": 12938,
+      "sha256": "25114f9a0e9ab4dd702633ae927fc825dc79a4d9f7746c1bb75dbd10d61eb6d6"
+    },
+    {
+      "path": "sys/shadowmask.sv",
+      "bytes": 3753,
+      "sha256": "e1ddba7502662dd1ad5a18950abbf912d8e91a66d233baef608c15729bc39d0a"
+    },
+    {
+      "path": "sys/sigma_delta_dac.v",
+      "bytes": 967,
+      "sha256": "6c93dfa8397caa35f55288271f6081827df41eedc98ade6cc810575afcfbaaea"
+    },
+    {
+      "path": "sys/spdif.v",
+      "bytes": 9538,
+      "sha256": "4032717bb9a5cd0b1c72dac82f5f3fc3c6ed4974a6767c2865d380ea214eb55f"
+    },
+    {
+      "path": "sys/sys.qip",
+      "bytes": 3563,
+      "sha256": "9e6efe0a86c22bcbeb28e0860c694fd28f8e597fd55e3165f1c8e94a88522603"
+    },
+    {
+      "path": "sys/sys.tcl",
+      "bytes": 11160,
+      "sha256": "e9ab2b7c89b4347854810387550a65458aa3ec9de1bd26ad74328d73376f6a88"
+    },
+    {
+      "path": "sys/sys_analog.tcl",
+      "bytes": 3085,
+      "sha256": "e4cbfd22985fa046b546c0cfc626fccf773d9098b7c6a595f8bea66d67d25203"
+    },
+    {
+      "path": "sys/sys_dual_sdram.tcl",
+      "bytes": 2559,
+      "sha256": "4f41376069b2070079d8ba4ae4a722c8ecfe3ca4b99798d0bdd8cda986b5ad5b"
+    },
+    {
+      "path": "sys/sys_top.sdc",
+      "bytes": 3642,
+      "sha256": "0a5fa4015b82ad7ce38e56d1ae4aadea6209af59c5dd9eff56a11139cf16ce86"
+    },
+    {
+      "path": "sys/sys_top.v",
+      "bytes": 46901,
+      "sha256": "156f887ce0f35094926875b2195caa9b04dc3a3671b87d1ddec3b9c64da8672c"
+    },
+    {
+      "path": "sys/sysmem.sv",
+      "bytes": 16792,
+      "sha256": "247f4aaa270d45e0c8a44dc1361040a519836bd7d0493d708fe40a00443e4377"
+    },
+    {
+      "path": "sys/vga_out.sv",
+      "bytes": 2115,
+      "sha256": "0a3198971def145f22625e12bb2f1c2ec41e0402a7e296154ce9dad40584e429"
+    },
+    {
+      "path": "sys/video_cleaner.sv",
+      "bytes": 1900,
+      "sha256": "44b986d9bf8412e56bf8e4eae3dc87e04b4c378e58ec6119de5a8aed320e3572"
+    },
+    {
+      "path": "sys/video_freak.sv",
+      "bytes": 8301,
+      "sha256": "6a9b8565f66894a8f2ec10c916593e980d260f29f1886bfe70bf6f3b0cf6edc0"
+    },
+    {
+      "path": "sys/video_freezer.sv",
+      "bytes": 2971,
+      "sha256": "0f3f4710b072b7e90b0b6bfe7607dec18dbd6bed78d1994f32d6fa72a6b7aef3"
+    },
+    {
+      "path": "sys/video_mixer.sv",
+      "bytes": 4715,
+      "sha256": "31ed2c917bd6680b4d60328e71a4f28015bd5fcec21e15b290eacec88971167d"
+    },
+    {
+      "path": "sys/yc_out.sv",
+      "bytes": 9875,
+      "sha256": "3cb6ebe414da0830cb83d15f016ef6970afb8efed2b36bbb0b948689cd8d6fcc"
+    },
+    {
+      "path": "tools/check_source.py",
+      "bytes": 691,
+      "sha256": "84e40369da2815a980febfd3000334c17454976a4b33ebd0a94b41f7c8ea292a"
+    },
+    {
+      "path": "tools/report_timing.tcl",
+      "bytes": 11651,
+      "sha256": "4d7133142a817619b6191031f3dc9fd0c8c07a71eba448f0bdc31dc133db7c58"
+    },
+    {
+      "path": "UPSTREAM_README.md",
+      "bytes": 10177,
+      "sha256": "4f7130a19537f90cc0932064f5cec5f470a40f471c72d04fa3287335b9c5ec57"
+    },
+    {
+      "path": "validation/build-provenance.json",
+      "bytes": 14512,
+      "sha256": "a6e3523a33b3f8f51e0c2031c6e0bb09b16017da297b90056fb08cfde4069fae"
+    },
+    {
+      "path": "validation/README.md",
+      "bytes": 4000,
+      "sha256": "e596d76a463169e27ab61a6bdc3818905ae0b196a3a6fea5d47601eb38baa718"
+    },
+    {
+      "path": "validation/timing/dual-focused.tsv",
+      "bytes": 2456,
+      "sha256": "ffb40a5435453bc0b2fc48fc94458ef91fc7be8fcf83b3943487b4afa8f83e48"
+    },
+    {
+      "path": "validation/timing/dual-full.tsv",
+      "bytes": 2328,
+      "sha256": "e0c9944a8c13c4636cea7b0b309e4c79f783fe28b3d884ab4d3ae44540d7804d"
+    },
+    {
+      "path": "validation/timing/dual-reset.tsv",
+      "bytes": 1270,
+      "sha256": "1fe7a7e7f52be7322a8f078993ca7b75e1e11846de2b29af9c6437e994368608"
+    },
+    {
+      "path": "validation/timing/single-focused.tsv",
+      "bytes": 2450,
+      "sha256": "592ad75944551c32f0180607a91d88c3df2f57bcb0610dde232ac4c2c563cca9"
+    },
+    {
+      "path": "validation/timing/single-full.tsv",
+      "bytes": 2322,
+      "sha256": "ce5b3e37bc19f412a7e6ebe59890e472094a120970756984948a94d096b2c8e0"
+    },
+    {
+      "path": "validation/timing/single-reset.tsv",
+      "bytes": 1270,
+      "sha256": "f37d324cb5da42821f3ec991a9787b952f162142b874be4508c985fe1f19c29b"
+    }
+  ]
+}

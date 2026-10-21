@@ -1,0 +1,18 @@
+set_global_assignment -name TOP_LEVEL_ENTITY sys_top
+source PSX_DualSDRAM.qsf
+set_global_assignment -name VERILOG_MACRO "PSX_HQ2X=1"
+
+# The combined single-SDRAM control repeatedly misses HDMI setup through this
+# adaptive coefficient selector. Limit its load as a routing experiment for
+# the connected unit's Dual candidate; verify the assignment matches/is honored.
+# This does not change clocks, exceptions, pixel arithmetic or pipeline cycles.
+set_instance_assignment -name MAX_FANOUT 16 -to "ascal|o_v_poly_use_adaptive"
+
+# Preserve the kept combinational write-address hold cell in this FIFO.
+set_instance_assignment -name IGNORE_LCELL_BUFFERS OFF -to "emu|psx|ipsx_top|imemorymux|iwritefifo"
+
+# Reproducible build invocation overrides.
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"

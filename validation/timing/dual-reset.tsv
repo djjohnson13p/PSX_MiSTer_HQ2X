@@ -1,0 +1,17 @@
+corner	display_name	analysis	reported_paths	worst_slack	reported_path_TNS	status
+corner-01	Slow 1100mV 100C Model	reset-setup	1	10.320	NA	nonnegative_slack
+corner-01	Slow 1100mV 100C Model	reset-hold	1	0.514	NA	nonnegative_slack
+corner-02	Slow 1100mV -40C Model	reset-setup	1	10.297	NA	nonnegative_slack
+corner-02	Slow 1100mV -40C Model	reset-hold	1	0.548	NA	nonnegative_slack
+corner-03	Slow 1100mV 85C Model	reset-setup	1	10.323	NA	nonnegative_slack
+corner-03	Slow 1100mV 85C Model	reset-hold	1	0.518	NA	nonnegative_slack
+corner-04	Slow 1100mV 0C Model	reset-setup	1	10.299	NA	nonnegative_slack
+corner-04	Slow 1100mV 0C Model	reset-hold	1	0.533	NA	nonnegative_slack
+corner-05	Fast 1100mV -40C Model	reset-setup	1	10.900	NA	nonnegative_slack
+corner-05	Fast 1100mV -40C Model	reset-hold	1	0.254	NA	nonnegative_slack
+corner-06	Fast 1100mV 0C Model	reset-setup	1	10.894	NA	nonnegative_slack
+corner-06	Fast 1100mV 0C Model	reset-hold	1	0.259	NA	nonnegative_slack
+corner-07	Fast 1100mV 85C Model	reset-setup	1	10.868	NA	nonnegative_slack
+corner-07	Fast 1100mV 85C Model	reset-hold	1	0.270	NA	nonnegative_slack
+corner-08	Fast 1100mV 100C Model	reset-setup	1	10.865	NA	nonnegative_slack
+corner-08	Fast 1100mV 100C Model	reset-hold	1	0.274	NA	nonnegative_slack

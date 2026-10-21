@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "validation_date": "2026-10-21",
+  "status": "Selected experimental Dual test build; matched Single is comparison only",
+  "path_bases": {
+    "source_file_paths": "Public source repository root",
+    "timing_table_paths": "This validation directory"
+  },
+  "upstream": {
+    "repository": "https://github.com/MiSTer-devel/PSX_MiSTer",
+    "commit": "cd17b5a0ad261005c321d9d5ba41b8dbe313a7d3"
+  },
+  "toolchain": {
+    "product": "Altera Quartus Prime Lite",
+    "version": "25.1std.0",
+    "build": 1129,
+    "device": "5CSEBA6U23I7",
+    "family": "Cyclone V",
+    "seed": 1,
+    "parallel_workers": 4,
+    "fitter_junction_temperature_range_c": [
+      -40,
+      100
+    ],
+    "clock_periods_ns": {
+      "VIDEO": 11.641,
+      "core": 29.524,
+      "HDMI": 6.732
+    },
+    "clocks_and_SDC_exceptions_relaxed": false
+  },
+  "variants": {
+    "dual": {
+      "project": "PSX_HQ2X_DualSDRAM",
+      "qpf": "PSX_HQ2X_DualSDRAM.qpf",
+      "built_rbf_filename": "PSX_HQ2X_DualSDRAM.rbf",
+      "rbf_bytes": 4467892,
+      "rbf_sha256": "384046b41006c595c6cd9d24873dc3c30080f7cf2a14d2d96506c393b5f5fc3c",
+      "selected": true,
+      "hardware_tested": true,
+      "output_framework": "Original Dual SDRAM board/output framework; no additional HQ2X-specific split",
+      "resources": {
+        "needed_alms": 41119,
+        "available_alms": 41910,
+        "registers": 44952,
+        "ram_blocks": 432,
+        "available_ram_blocks": 553,
+        "dsp_blocks": 112,
+        "available_dsp_blocks": 112
+      }
+    },
+    "single": {
+      "project": "PSX_HQ2X",
+      "qpf": "PSX_HQ2X.qpf",
+      "built_rbf_filename": "PSX_HQ2X.rbf",
+      "rbf_bytes": 4447172,
+      "rbf_sha256": "47c003e1beb4e3fb50ce3477616b3acdcc5098f4fb50b43ceba82890e82c5dd2",
+      "selected": false,
+      "hardware_tested": false,
+      "output_framework": "Original combined analog/HDMI framework",
+      "resources": {
+        "needed_alms": 41206,
+        "available_alms": 41910,
+        "registers": 45467,
+        "ram_blocks": 433,
+        "available_ram_blocks": 553,
+        "dsp_blocks": 112,
+        "available_dsp_blocks": 112
+      }
+    }
+  },
+  "source_fingerprints": [
+    {
+      "path": "PSX.sv",
+      "bytes": 59372,
+      "sha256": "8cfc8a8ed7ace2e8a7348ad1c46f35fc9266fbd97ed14afc81d7a9f818e89d97"
+    },
+    {
+      "path": "PSX.sdc",
+      "bytes": 2000,
+      "sha256": "ee521fb98b12cd7b31d6ea6ae0ec33a4a45c74da34d20345241efd11819f2384"
+    },
+    {
+      "path": "PSX_HQ2X.qpf",
+      "bytes": 55,
+      "sha256": "caec0c7202920574c47176b020f661bcd7fc72ad6f02f0cb2eb81b56ed0953d6"
+    },
+    {
+      "path": "PSX_HQ2X_DualSDRAM.qpf",
+      "bytes": 65,
+      "sha256": "5ff0fa42a0581ff6b0351228793893dc17894d21e07807509f7ebedfa40506fb"
+    },
+    {
+      "path": "sys/ascal.vhd",
+      "bytes": 98563,
+      "sha256": "c53231d8d48c0f890326a782dfe3feb8d486cfdddba5de224c05a7bc6b841cf1"
+    },
+    {
+      "path": "rtl/SyncFifoFallThroughMLAB.vhd",
+      "bytes": 4407,
+      "sha256": "6206ea700e43dcea1db0c9ab092efa54e220ecd6c20bc0c955eba9435d1e607d"
+    },
+    {
+      "path": "rtl/memorymux.vhd",
+      "bytes": 61285,
+      "sha256": "0b76931cedf8ae831a2e26c7259019a82d8decd23f4760a9ecb68b4439b54098"
+    },
+    {
+      "path": "sys/sys_top.v",
+      "bytes": 46901,
+      "sha256": "156f887ce0f35094926875b2195caa9b04dc3a3671b87d1ddec3b9c64da8672c"
+    },
+    {
+      "path": "sys/sys_dual_sdram.tcl",
+      "bytes": 2559,
+      "sha256": "4f41376069b2070079d8ba4ae4a722c8ecfe3ca4b99798d0bdd8cda986b5ad5b"
+    }
+  ],
+  "matched_source_comparison": {
+    "shared_actual_HDL_SDC_QIP_HEX_MIF_files": 162,
+    "all_match": true,
+    "limit": "Same shared source bytes, different original board elaboration and placement; not identical netlists or proof that every future Single placement fails."
+  },
+  "timing": {
+    "units": "ns",
+    "voltage_mv": 1100,
+    "qualification_scope": "Discrete Slow/Fast 0C, 85C and 100C internal timing models",
+    "dual_closure_within_scope": true,
+    "full_original_minus40_to100_closure": false,
+    "dual_known_out_of_scope_failure": {
+      "model": "Slow",
+      "junction_temperature_c": -40,
+      "analysis": "setup",
+      "wns_ns": -0.045
+    },
+    "selection_rule": "Minimum of setup and hold across Slow/Fast 0C, retaining warm-model and hardware checks",
+    "minimum_0C_setup_hold_ns": {
+      "dual": 0.013,
+      "single": -0.374
+    },
+    "minimum_85_100C_setup_hold_ns": {
+      "dual": 0.087,
+      "single": -0.672
+    },
+    "global_models": {
+      "dual": [
+        {
+          "model": "Slow",
+          "junction_temperature_c": 100,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 0.23,
+          "hold_wns_ns": 0.247,
+          "recovery_wns_ns": 3.489,
+          "removal_wns_ns": 1.221
+        },
+        {
+          "model": "Slow",
+          "junction_temperature_c": -40,
+          "voltage_mv": 1100,
+          "setup_wns_ns": -0.045,
+          "hold_wns_ns": 0.133,
+          "recovery_wns_ns": 3.686,
+          "removal_wns_ns": 1.138
+        },
+        {
+          "model": "Slow",
+          "junction_temperature_c": 85,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 0.215,
+          "hold_wns_ns": 0.25,
+          "recovery_wns_ns": 3.541,
+          "removal_wns_ns": 1.212
+        },
+        {
+          "model": "Slow",
+          "junction_temperature_c": 0,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 0.013,
+          "hold_wns_ns": 0.138,
+          "recovery_wns_ns": 3.683,
+          "removal_wns_ns": 1.13
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": -40,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 3.472,
+          "hold_wns_ns": 0.068,
+          "recovery_wns_ns": 5.055,
+          "removal_wns_ns": 0.511
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": 0,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 3.358,
+          "hold_wns_ns": 0.076,
+          "recovery_wns_ns": 4.985,
+          "removal_wns_ns": 0.529
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": 85,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 2.852,
+          "hold_wns_ns": 0.087,
+          "recovery_wns_ns": 4.746,
+          "removal_wns_ns": 0.586
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": 100,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 2.742,
+          "hold_wns_ns": 0.089,
+          "recovery_wns_ns": 4.677,
+          "removal_wns_ns": 0.601
+        }
+      ],
+      "single": [
+        {
+          "model": "Slow",
+          "junction_temperature_c": 100,
+          "voltage_mv": 1100,
+          "setup_wns_ns": -0.672,
+          "hold_wns_ns": 0.197,
+          "recovery_wns_ns": 3.326,
+          "removal_wns_ns": 1.062
+        },
+        {
+          "model": "Slow",
+          "junction_temperature_c": -40,
+          "voltage_mv": 1100,
+          "setup_wns_ns": -0.449,
+          "hold_wns_ns": 0.192,
+          "recovery_wns_ns": 3.523,
+          "removal_wns_ns": 0.998
+        },
+        {
+          "model": "Slow",
+          "junction_temperature_c": 85,
+          "voltage_mv": 1100,
+          "setup_wns_ns": -0.616,
+          "hold_wns_ns": 0.207,
+          "recovery_wns_ns": 3.376,
+          "removal_wns_ns": 1.052
+        },
+        {
+          "model": "Slow",
+          "junction_temperature_c": 0,
+          "voltage_mv": 1100,
+          "setup_wns_ns": -0.374,
+          "hold_wns_ns": 0.195,
+          "recovery_wns_ns": 3.53,
+          "removal_wns_ns": 0.993
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": -40,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 2.988,
+          "hold_wns_ns": 0.076,
+          "recovery_wns_ns": 5.049,
+          "removal_wns_ns": 0.463
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": 0,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 2.848,
+          "hold_wns_ns": 0.08,
+          "recovery_wns_ns": 4.993,
+          "removal_wns_ns": 0.476
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": 85,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 2.23,
+          "hold_wns_ns": 0.092,
+          "recovery_wns_ns": 4.797,
+          "removal_wns_ns": 0.522
+        },
+        {
+          "model": "Fast",
+          "junction_temperature_c": 100,
+          "voltage_mv": 1100,
+          "setup_wns_ns": 2.129,
+          "hold_wns_ns": 0.095,
+          "recovery_wns_ns": 4.736,
+          "removal_wns_ns": 0.532
+        }
+      ]
+    },
+    "tables": [
+      {
+        "path": "timing/dual-full.tsv",
+        "variant": "dual",
+        "scope": "full",
+        "bytes": 2328,
+        "sha256": "e0c9944a8c13c4636cea7b0b309e4c79f783fe28b3d884ab4d3ae44540d7804d",
+        "rows": 32
+      },
+      {
+        "path": "timing/dual-focused.tsv",
+        "variant": "dual",
+        "scope": "focused",
+        "bytes": 2456,
+        "sha256": "ffb40a5435453bc0b2fc48fc94458ef91fc7be8fcf83b3943487b4afa8f83e48",
+        "rows": 32
+      },
+      {
+        "path": "timing/dual-reset.tsv",
+        "variant": "dual",
+        "scope": "reset",
+        "bytes": 1270,
+        "sha256": "1fe7a7e7f52be7322a8f078993ca7b75e1e11846de2b29af9c6437e994368608",
+        "rows": 16
+      },
+      {
+        "path": "timing/single-full.tsv",
+        "variant": "single",
+        "scope": "full",
+        "bytes": 2322,
+        "sha256": "ce5b3e37bc19f412a7e6ebe59890e472094a120970756984948a94d096b2c8e0",
+        "rows": 32
+      },
+      {
+        "path": "timing/single-focused.tsv",
+        "variant": "single",
+        "scope": "focused",
+        "bytes": 2450,
+        "sha256": "592ad75944551c32f0180607a91d88c3df2f57bcb0610dde232ac4c2c563cca9",
+        "rows": 32
+      },
+      {
+        "path": "timing/single-reset.tsv",
+        "variant": "single",
+        "scope": "reset",
+        "bytes": 1270,
+        "sha256": "f37d324cb5da42821f3ec991a9787b952f162142b874be4508c985fe1f19c29b",
+        "rows": 16
+      }
+    ],
+    "scope_limits": [
+      "Junction characterization models are not ambient-temperature measurements or an interpolated 20C result.",
+      "TSVs are exact retained report summaries: global 20 paths/check, focused 64 paths/check and reset one direct path/check; not every alternative timing path or a total-negative-slack calculation.",
+      "Inherited unconstrained I/O and check_timing coverage remains; internal STA does not certify board electrical timing.",
+      "Independent completed-file review matched 80 detailed Single summaries to TSV counts and WNS, all eight pulse-width checks and 16 reset paths."
+    ]
+  },
+  "hardware_validation": {
+    "board_class": "Terasic DE10-Nano with two SDRAM modules",
+    "rbf_sha256": "384046b41006c595c6cd9d24873dc3c30080f7cf2a14d2d96506c393b5f5fc3c",
+    "progressive_fixture": {
+      "description": "Source-owned 320x240 diagonal/checker/grid/color-bar diagnostic",
+      "HQ_off_native_capture_dimensions": [
+        352,
+        240
+      ],
+      "HQ_on_native_capture_dimensions": [
+        704,
+        480
+      ],
+      "HQ_on_full_pixels_exact": 337920,
+      "HQ_on_visible_pixels_exact": 307200,
+      "reference": "Actual shared MiSTer HQ2X/scandoubler engine and standard mixer simulation",
+      "limit": "Exact native-pixel integration for one fixture; shared reference is not an independent HQ2X specification."
+    },
+    "mode_sweeps": {
+      "fresh_HQ_off_and_on": true,
+      "modes_per_sweep": 8,
+      "sweeps_per_phase": 2,
+      "terminal_result": "DONE 2 SWEEPS with final PAL480i mode/register checks",
+      "final_native_capture_dimensions": [
+        352,
+        480
+      ],
+      "final_source_body_pixels_exact": 97280,
+      "limit": "Only final geometry captured; does not establish every intermediate geometry or physical field cadence."
+    },
+    "SPU_backends": {
+      "backends": [
+        "DDR3",
+        "SDRAM2"
+      ],
+      "fresh_load_per_backend": true,
+      "HQ_on": true,
+      "same_region_bytes": 1024,
+      "patterns": 4,
+      "compared_bytes_per_backend": 4096,
+      "result": "PASS 4 PATTERNS; code 0; cleanup 0; no byte mismatch",
+      "passive_digital_board_enable_samples_per_backend": 10,
+      "limit": "Bounded repeated 1 KiB roundtrip, not full 512 KiB SPU/module health or independent pin-level transaction tracing."
+    },
+    "representative_game": {
+      "title": "Ridge Racer",
+      "fresh_HQ_off_and_on": true,
+      "native_captures_per_phase": 3,
+      "observed": "Complete distinct 3D road, tunnel and coastal race scenes",
+      "dimensions_off_on": [
+        [
+          352,
+          240
+        ],
+        [
+          704,
+          480
+        ]
+      ],
+      "limit": "Unsynchronized frames; no exact Off/On pair comparison, frame-rate measurement or universal compatibility claim."
+    },
+    "isolated_launcher": {
+      "source": "launchers/PSX HQ2X Test.mgl",
+      "bytes": 172,
+      "sha256": "5fc1116109e6f75ae6fbd5e4bded235a27992fb0776ee2876ba807757f2977af",
+      "actions": "Set isolated test name and existing RBF only; no scheduled file or reset",
+      "smoke_result": "Complete BIOS Main Menu native capture, 704x478",
+      "publication": "Same bytes exclusively installed and readback-verified",
+      "limit": "Runtime smoke used a temporary launcher path; permanent publication verified bytes/resolver, without re-launching the permanent path."
+    },
+    "preservation": "Tracked original core, profile, save and media files remained unchanged; exact owned temporary files removed; control returned to User at MENU with closed transport. One active project test RBF plus its launcher; history retained separately.",
+    "limits": [
+      "No physical HDMI/analog/audio/frequency certification.",
+      "No whole-card file audit or universal game compatibility claim.",
+      "Native screenshots, game/BIOS/media images and private device receipts are not part of this validation dataset."
+    ]
+  }
+}

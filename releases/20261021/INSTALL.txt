@@ -1,0 +1,51 @@
+Experimental PSX HQ2X for MiSTer - 2026-10-21
+
+This selected Dual SDRAM build requires TWO SDRAM modules.
+Source, build instructions, credits and timing/test limits:
+https://github.com/djjohnson13p/PSX_MiSTer_HQ2X
+
+INSTALL
+1. Keep your original PSX RBF and original PSX configuration.
+2. Extract the ZIP at the root of your MiSTer SD card. It adds:
+   _Console/PSX_HQ2X_Test.rbf
+   _Console/PSX HQ2X Test.mgl
+   config/PSX_HQ2X_Test.CFG
+   If you already have a test CFG of that name, back it up before replacing it.
+3. In the MiSTer menu select "PSX HQ2X Test" WITHOUT underscores.
+   This is the MGL launcher with an isolated test profile. The underscored
+   RBF entry loads the core directly and can use your normal PSX settings.
+4. Supply your own PSX BIOS and games in the usual PSX locations.
+   The launcher specifies no game. Normal core startup behavior applies.
+5. Video & Audio -> HQ2x (240p/288p) toggles the filter. The provided test
+   profile starts with HQ2x On and SPU RAM on SDRAM2.
+
+The test profile also sets memory-card saving to Manual and disables
+Automount Memory Card 1. Review these options before ordinary saved-game use.
+Keep your normal PSX profile separate. No BIOS, games or saves are included.
+
+HQ2X doubles eligible progressive pixels after gamma. Interlaced/high-vertical
+video, direct framebuffer, 480p hack, fast-forward, Direct Video and
+GunCon/Justifier/SNAC-port configurations use the native path.
+
+QUALIFICATION
+The exact included RBF passed the reported internal setup, hold, recovery,
+removal and pulse-width checks at the discrete Slow/Fast 0C, 85C and 100C
+Quartus models. Minimum 0C setup/hold margin is +0.013 ns. Slow -40C setup
+misses by -0.045 ns. These are FPGA junction models, not measured room
+temperatures or full board certification. See validation/ for coverage.
+
+Native-capture tests covered an exact progressive fixture, finite mode
+transitions/interlace bypass, bounded SPU memory readback on both backends,
+and Ridge Racer attract rendering. Physical HDMI/audio, all games and all
+boards are not certified. This is an experimental community test build.
+
+Single SDRAM source is available for development; the matched Single build
+misses timing and no Single RBF is distributed as a qualified build.
+
+Validated RBF SHA-256:
+384046b41006c595c6cd9d24873dc3c30080f7cf2a14d2d96506c393b5f5fc3c
+
+The PSX core is by PSX_MiSTer authors/contributors including Robert Peip.
+The MiSTer framework is by Sorgelig and contributors. HQ2X RTL retains
+Ludvig Strigeus and Sorgelig's notices. GPL v2 license text is included;
+component/vendor notices apply. Corresponding source is in the repository.

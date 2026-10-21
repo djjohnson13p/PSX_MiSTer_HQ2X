@@ -1,0 +1,10 @@
+Corresponding source and validation bundle:
+https://github.com/djjohnson13p/PSX_MiSTer_HQ2X
+
+Public upstream base:
+https://github.com/MiSTer-devel/PSX_MiSTer/tree/cd17b5a0ad261005c321d9d5ba41b8dbe313a7d3
+
+This package contains the validated 2026-10-21 experimental Dual SDRAM RBF.
+See validation/build-provenance.json for exact input fingerprints, model
+scope and artifact hashes, docs/BUILD.md for build instructions, and the
+repository README for upstream/HQ2X credits and retained source notices.
